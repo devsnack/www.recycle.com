@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+}
+.row{
+    margin: 0;
+}
+.pad{
+    padding: 0;
+}
+.side{
+
+ width : 100%;
+ height : 91.5vh;
+ text-align: center;
+ box-shadow: 0px 10px 20px #d6c1c1;
+}
+.side ul{
+    width: 100%;
+    transition: 1s;
+}
+.side ul li {
+    border-left: 2px solid ;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.side ul li:hover{
+    background: var(--teal);
+}
+.cam{
+    overflow-y: scroll;
+}
+.container{
+    height : 50%;
+}
+
+.ready{
+    display: none;
+}

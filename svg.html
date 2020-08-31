@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding :0;
+            margin: 0;
+            box-sizing: border-box;
+        
+        }
+        header{
+            height: 100vh;
+            width: 100%;
+            /*overflow: hidden;P*/
+            display: grid;
+            grid-auto-rows: 3rem 1fr;
+            grid-template-columns: 1fr;
+        }
+        header img{
+            height: 100%;
+            width: 100%;
+           object-fit: cover;
+           z-index: -1;
+            position: absolute;
+        }
+        header main {
+            display: flex;
+            justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 3rem;
+        font-family: 'Alata', sans-serif;
+                 }
+        main h2{
+            font-size: 3rem;
+    color: #4bb693;
+        }
+        main p{
+            font-size: 1.3rem;
+    margin-top: 2rem;
+    text-transform: capitalize;
+        }
+        main button {
+            outline: none;
+    border: 2px solid #55b897;
+    text-transform: capitalize;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    color: #55b897;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+    margin-top: 3rem;
+        }
+        main button:hover{
+            background :#55b897;
+            color: white;
+        }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem;
+    }
+    nav a img{
+        width: 80px;
+        height: 80px;
+        margin-top: -2rem;
+    }
+
+    nav a{
+        text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    font-family: 'Alata', sans-serif;
+    transition: all .6s ease-in-out;
+    }
+    nav a:hover{
+        color: #55b897;
+    }
+        
+           </style>
+
+</head>
+<body>
+    <header>
+        <img src="about-us.svg">
+        <nav>
+            <a>
+                <img src="logo.svg">
+            </a>
+            <a href="index.html">
+                Home
+            </a>
+        </nav>
+        <main>
+            <h2>Save Nature</h2>
+            <p>akk  chayef mel 3andiw <br> 3andek w na9ouha</p>
+            <button>s'inscrir</button>
+        </main>
+    </header>
+    
+</body>
+</html>

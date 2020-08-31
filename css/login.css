@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url("bootstrap.css");
+*{
+    padding : 0;
+    margin : 0;
+    font-family: "montserrat";
+    box-sizing: border-box;
+
+    transition: .8s;
+}
+body{
+   /* background-image: linear-gradient(135deg, rgba(54, 213, 185, 0.1), #36d5b9);*/
+   background: linear-gradient(270deg, rgba(34,46,64,1) 0%, rgba(81,195,184,1) 100%);
+   position: relative;
+}
+.underbox{
+    height: 420px;
+    width: 700px;
+    background: #fff;
+    position: absolute;
+    /* margin: 10px auto; */
+    left: 15%;
+    z-index: -2;
+    border-radius: 10px;
+    top: 49px;
+}
+.underbox .text{
+    font-size: 30px;
+    margin: 40px;
+    font-family: 'lora';
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    width: 43%;
+    text-align: center;
+
+}
+.underbox h4{
+    font-family: 'lora';
+}
+.underbox h4 span{
+    color : #75e2cf;
+}
+.underbox .text img{
+    height: 200px;
+    width: 80%;
+}
+
+
+/***  log box ***/
+
+.logbox{
+    height: 500px;
+    width : 300px;
+    margin: 100px auto;
+    background: #fff;
+    border-radius: 2%;
+    background: linear-gradient(42deg, rgba(42,46,54,1) 0%, rgba(97,107,125,1) 100%);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+  
+
+}
+.logbox h3{
+    text-align: center;
+    padding: 40px;
+    font-size: 26px;
+    text-transform: capitalize; 
+    color : #fff;
+
+}
+
+
+
+:focus{outline: none;}
+
+.field{
+      margin: 40px 3%;
+       position: relative;
+       z-index : 5 ;
+    } 
+    /* necessary to give position: relative to parent. */
+
+    .field input[type="email"], .field  input[type="password"]{
+    font: 15px/24px "sen", Arial, sans-serif;
+     color: rgb(255, 255, 255);
+      width: 100%;
+       box-sizing: border-box;
+        letter-spacing: 1px;
+        padding-left: 8px;
+
+        
+    }
+
+
+/****************************************/
+.effect-16{
+    border: 0;
+     padding: 4px 0;
+      border-bottom: 1px solid #ccc;
+       background-color: transparent;
+     
+    }
+
+.effect-16 ~ .focus-border{
+    position: absolute;
+     bottom: 0; left: 0;
+      width: 0;
+       height: 2px;
+        background-color: #3399FF;
+         transition: 0.4s;
+         background-color: #75e2cf;
+		box-shadow: 0 0 10px #75e2cf;
+        }
+
+.effect-16:focus ~ .focus-border, .has-content.effect-16 ~ .focus-border{
+    width: 100%; transition: 0.4s;
+}
+.effect-16 ~ label{
+    position: absolute; 
+    left: 0; width: 100%;
+     top: 6px; 
+     color: #000;
+     font-weight: bold;
+      transition: 0.3s; 
+      z-index: -1;
+       letter-spacing: 0.5px;
+     margin-left: 5px;
+    }
+.effect-16:focus ~ label, .has-content.effect-16 ~ label{
+    top: -16px; 
+    font-size: 12px;
+     color: #3399FF;
+      transition: 0.3s;
+    }
+
+.submit {
+    border: 2px solid #85c7db;
+    /*padding: 10px 0px;*/
+    width: 50%;
+    height: 30px;
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 20%;
+    font-weight: bold;
+}
+.submit:hover{
+    background: #85c7db ;
+}
+
+/*  change color */
+.effect-16 ~ label ,.effect-16 input[type="email"],.effect-16 input[type="password"]{
+    color : #fff;
+}
+
+.custom-alert{
+    width : 90%;
+    margin : 0px auto 20px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .underbox{
+        display: none;
+    }
+    .logbox{
+        width: 100%;
+        margin:0;
+        height: 100vh;
+        background: #fff;
+        border-radius: 0;
+        
+    }
+    .field input[type="email"],.field input[type="password"],.effect-16 ~ label{
+        color :#000;
+    
+            
+        }
+        .logbox h3{
+            color : #000;
+        }
+        .submit{
+            color :  #85c7db;
+            width: 70%;
+            height: 40px;
+            margin-left: 15%;
+            font-size: 20px;
+        }
+        .submit:hover{
+            color: #fff;
+        }
+}
+
+
+
+
+
+

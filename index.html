@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--**********************   import all library      *********************************-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Sen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/index.css"
+    />
+  </head>
+  <body>
+    <div class="landing">
+      <!-- start nav -->
+
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo.svg" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <!-- dropdown menu -->
+          <li>
+            <div class="dropdown">
+              <a href="php/login.php" role="button"> Login </a>
+
+              <!-- <div class="dropdown-menu dpm" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="" style="color: black;">Action</a>
+                          
+                          
+                        </div>-->
+            </div>
+          </li>
+          <!-- end dropdown menu -->
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+
+      <!--  end nav-->
+
+      <!-- start land img-->
+
+      <div class="land">
+        <div class="left">
+          <h2>L'environnement ..!</h2>
+          <p>L'endroit le plus adapté pour protéger l'environnement</p>
+          <button onclick="window.location.href='php/signup.php'">
+            rejoindre nous
+          </button>
+        </div>
+        <div class="right">
+          <!--<div class="image">
+                        
+                    </div>-->
+          <img src="img/index2.svg" intrinsicsize="350x150" />
+        </div>
+      </div>
+      <!--end land img-->
+    </div>
+
+    <!-- start about us section-->
+    <!--
+<div class="about-us">
+  <h2>aboutUs</h2>
+  
+        Swiper 
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="image">
+            <img src="img/slider2.png">
+        </div>
+        <div class="text">
+            <h4>test lorem ipsim</h4>
+        </div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="image">
+          <img src="img/slider1.png">
+      </div>
+      <div class="text">
+          <h4>test lorem ipsim</h4>
+      </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="image">
+          <img src="img/slider3.png">
+      </div>
+      <div class="text">
+          <h4>test lorem ipsim</h4>
+      </div>
+      </div>
+      
+      
+    </div>
+    Add Pagination 
+    <div class="swiper-pagination"></div>
+  </div>
+        
+      
+
+</div>-->
+
+    <!-- *************************   start script ************************************-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      function navSlide() {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links li");
+
+        burger.addEventListener("click", () => {
+          //Toggle Nav
+          nav.classList.toggle("nav-active");
+
+          //Animate Links
+          navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.5
+              }s`;
+            }
+          });
+          //Burger Animation
+          burger.classList.toggle("toggle");
+        });
+      }
+
+      navSlide();
+    </script>
+    <!-- caroussel about-us script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+    </script>
+  </body>
+</html>
